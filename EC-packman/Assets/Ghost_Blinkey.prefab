@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4120561399645027035, guid: 59404d0765a2b8b4494f86b14891ca65, type: 3}
       propertyPath: m_Name
-      value: Ghost_Blinky Variant
+      value: Ghost_Blinkey
       objectReference: {fileID: 0}
     - target: {fileID: 5338309445915118249, guid: 59404d0765a2b8b4494f86b14891ca65, type: 3}
       propertyPath: m_Color.b
