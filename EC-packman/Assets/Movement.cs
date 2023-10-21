@@ -14,7 +14,7 @@ public abstract class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -24,6 +24,9 @@ public abstract class Movement : MonoBehaviour
         {
             SetDirection(nextDirection);
         }
+
+
+        ChildUpdate();
     }
     private void FixedUpdate()
     {
@@ -49,5 +52,5 @@ public abstract class Movement : MonoBehaviour
             nextDirection = newDirection;
         }
     }
-
+    abstract protected void ChildUpdate();
 }
