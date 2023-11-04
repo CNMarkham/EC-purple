@@ -24,31 +24,34 @@ public abstract class Movement : MonoBehaviour
         {
             SetDirection(nextDirection);
         }
-
-
         ChildUpdate();
     }
     private void FixedUpdate()
     {
+
         Vector2 position = rb.position;
         Vector2 translation = direction * speed * Time.fixedDeltaTime;
 
+
         rb.MovePosition(position + translation);
     }
-    private bool Occypied(Vector2 newDirection)
+    private bool Occupied(Vector2 newDirection)
     {
         RaycastHit2D hit = Physics2D.BoxCast(transform.position, Vector2.one * 0.75f, 0f, newDirection, 1.5f, obstacleLayer);
+
         return hit.collider != null;
     }
     protected void SetDirection(Vector2 newDirection)
     {
-        if (!Occypied(newDirection))
+
+        if (!Occupied(newDirection))
         {
             direction = newDirection;
             nextDirection = Vector2.zero;
         }
         else
         {
+
             nextDirection = newDirection;
         }
     }
