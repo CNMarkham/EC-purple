@@ -11,7 +11,11 @@ GameObject:
   - component: {fileID: 839543077311051253}
   - component: {fileID: 5338309445957698729}
   - component: {fileID: 1883913794710789980}
+<<<<<<< HEAD
+  - component: {fileID: -569702931313842308}
+=======
   - component: {fileID: 684562879923545714}
+>>>>>>> 2a9dbb8dbd371009f3accf4fe8acfefce9ce508a
   m_Layer: 7
   m_Name: Ghost_base
   m_TagString: Ghost
@@ -75,7 +79,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+<<<<<<< HEAD
+--- !u!114 &-569702931313842308
+=======
 --- !u!114 &684562879923545714
+>>>>>>> 2a9dbb8dbd371009f3accf4fe8acfefce9ce508a
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -84,9 +92,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 4120561399645027035}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
+  m_Script: {fileID: 11500000, guid: 72100e08720f6804a910747d101ad0ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  initialDirection: {x: 0, y: 0}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  body: {fileID: 0}
+  eyes: {fileID: 0}
+  blue: {fileID: 0}
+  white: {fileID: 0}
+  atHome: 0
+  homeDuration: 0
+=======
   m_Script: {fileID: 11500000, guid: 141cd9a9cf49c984298928ab4245803a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+>>>>>>> 2a9dbb8dbd371009f3accf4fe8acfefce9ce508a
 --- !u!1 &5338309444843185296
 GameObject:
   m_ObjectHideFlags: 0
