@@ -15,6 +15,8 @@ public abstract class Movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        SetDirection(initialDirection);
+        nextDirection = Vector2.zero;
     }
 
     // Update is called once per frame
@@ -31,7 +33,6 @@ public abstract class Movement : MonoBehaviour
 
         Vector2 position = rb.position;
         Vector2 translation = direction * speed * Time.fixedDeltaTime;
-
 
         rb.MovePosition(position + translation);
     }
