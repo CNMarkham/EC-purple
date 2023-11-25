@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-<<<<<<< HEAD
 public class Ghost : Movement
 {
     //////////////
@@ -34,7 +33,7 @@ public class Ghost : Movement
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-            
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -62,7 +61,7 @@ public class Ghost : Movement
 
     private void LeaveHome()
     {
-            
+
     }
 
     public void Frighten()
@@ -76,12 +75,6 @@ public class Ghost : Movement
     }
     private void Reset()
     {
-       
+
     }
-=======
-public class Ghost : MonoBehaviour
-{
-
-
->>>>>>> 2a9dbb8dbd371009f3accf4fe8acfefce9ce508a
 }
