@@ -15,6 +15,15 @@ public class PacMan : Movement
             transform.right = direction;
         }
     }
+    private void Update()
+    {
+        if (nextDirection != Vector2.zero)
+        {
+            SetDirection(nextDirection);
+        }
+
+        ChildUpdate();
+    }
 
 
 }
