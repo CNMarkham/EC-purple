@@ -6,11 +6,11 @@ public class Node : MonoBehaviour
 {
     public LayerMask obstacleLayer;
     public List<Vector2> availableDirections;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-       availableDirections = new List<Vector2>();
+        availableDirections = new List<Vector2>();
 
         CheckAvailableDirections(Vector2.up);
         CheckAvailableDirections(Vector2.down);
@@ -30,6 +30,6 @@ public class Node : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

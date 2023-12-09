@@ -33,7 +33,10 @@ public class Ghost : Movement
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
+        if (atHome && collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+        {
+            SetDirection(-direction);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -58,7 +61,15 @@ public class Ghost : Movement
 
     private void LeaveHome()
     {
-
+        transform.position = new Vector3(0, 2.5f, -1f);
+        direction = new Vector2(-1, 0);
+        atHome = false;
+        body.SetActive(true);
+        eyes.SetActive(true);
+        blue.SetActive(false);
+        white.SetActive(false);
+        frightened = false;
+        
     }
 
     public void Frighten()
