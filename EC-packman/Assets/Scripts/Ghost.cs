@@ -33,9 +33,28 @@ public class Ghost : Movement
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("mnjhgfdertyujhgfdserty");
         if (atHome && collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
         {
             SetDirection(-direction);
+        }
+        if (collision.gameObject.CompareTag("Pacman"))
+        {
+            if (frightened)
+            {
+                transform.position = new Vector3(0, -5f, -1f);
+                body.SetActive(false);
+                eyes.SetActive(true);
+                blue.SetActive(false);
+                white.SetActive(false);
+                atHome = true;
+                CancelInvoke();
+                Invoke("LeaveHome", 4f);
+            }
+            else
+            {
+                Destroy(collision.gameObject);
+            }
         }
     }
 
@@ -64,17 +83,26 @@ public class Ghost : Movement
         transform.position = new Vector3(0, 2.5f, -1f);
         direction = new Vector2(-1, 0);
         atHome = false;
+        frightened = false;
         body.SetActive(true);
         eyes.SetActive(true);
         blue.SetActive(false);
         white.SetActive(false);
-        frightened = false;
+        
         
     }
 
     public void Frighten()
     {
-
+        if (!atHome)
+        {
+            frightened = true;
+            body.SetActive(false);
+            eyes.SetActive(false);
+            blue.SetActive(true);
+            white.SetActive(false);
+            Invoke("Reset", 4f);
+        }
     }
 
     private void Flash()
@@ -83,6 +111,10 @@ public class Ghost : Movement
     }
     private void Reset()
     {
-
+        frightened = false;
+        body.SetActive(true);
+        eyes.SetActive(true);
+        blue.SetActive(false);
+        white.SetActive(false);
     }
 }

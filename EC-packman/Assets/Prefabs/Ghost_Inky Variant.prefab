@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2219608591791131010, guid: 59404d0765a2b8b4494f86b14891ca65, type: 3}
       propertyPath: m_Name
-      value: Ghost_Inky
+      value: Ghost_Inky Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3827034458755951737, guid: 59404d0765a2b8b4494f86b14891ca65, type: 3}
       propertyPath: m_RootOrder
@@ -58,6 +58,14 @@ PrefabInstance:
     - target: {fileID: 5454509143411129831, guid: 59404d0765a2b8b4494f86b14891ca65, type: 3}
       propertyPath: m_Color.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6520491903514644969, guid: 59404d0765a2b8b4494f86b14891ca65, type: 3}
+      propertyPath: atHome
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6520491903514644969, guid: 59404d0765a2b8b4494f86b14891ca65, type: 3}
+      propertyPath: homeDuration
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59404d0765a2b8b4494f86b14891ca65, type: 3}

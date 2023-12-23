@@ -7,7 +7,7 @@ public class Pellet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Pacman"))
         {
-            Debug.Log("pacman eating pellet");
+            //Debug.Log("pacman eating pellet");
             Eat();
         }
         
