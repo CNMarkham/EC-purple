@@ -33,7 +33,7 @@ public class Ghost : Movement
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("mnjhgfdertyujhgfdserty");
+        Debug.Log("ok");
         if (atHome && collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
         {
             SetDirection(-direction);
@@ -101,13 +101,17 @@ public class Ghost : Movement
             eyes.SetActive(false);
             blue.SetActive(true);
             white.SetActive(false);
-            Invoke("Reset", 4f);
+            Invoke("Flash", 4f);
         }
     }
 
     private void Flash()
     {
-
+        body.SetActive(false);
+        eyes.SetActive(false);
+        blue.SetActive(false);
+        white.SetActive(true);
+        Invoke("Reset", 4f);
     }
     private void Reset()
     {
