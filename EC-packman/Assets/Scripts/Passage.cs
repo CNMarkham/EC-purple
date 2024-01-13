@@ -9,6 +9,6 @@ public class Passage : MonoBehaviour
     {
         Vector3 tempPos = teleportPosition.position;
         tempPos.z = collision.transform.position.z;
-        collision.transform.position = tempPos;
+        collision.transform.position = teleportPosition.position;
     }
 }

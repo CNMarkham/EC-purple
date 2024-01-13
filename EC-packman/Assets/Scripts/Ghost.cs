@@ -33,7 +33,6 @@ public class Ghost : Movement
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("ok");
         if (atHome && collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
         {
             SetDirection(-direction);
@@ -42,7 +41,7 @@ public class Ghost : Movement
         {
             if (frightened)
             {
-                transform.position = new Vector3(0, -5f, -1f);
+                transform.position = new Vector3(0, -0.5f, -1f);
                 body.SetActive(false);
                 eyes.SetActive(true);
                 blue.SetActive(false);

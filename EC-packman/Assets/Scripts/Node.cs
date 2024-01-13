@@ -25,11 +25,4 @@ public class Node : MonoBehaviour
             availableDirections.Add(newDirection);
         }
     }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
