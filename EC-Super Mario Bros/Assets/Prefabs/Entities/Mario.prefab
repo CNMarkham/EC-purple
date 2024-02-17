@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4838267258987082088}
   - component: {fileID: 4838267258987082091}
+  - component: {fileID: 6485458902703778311}
   m_Layer: 0
   m_Name: Small
   m_TagString: Untagged
@@ -84,6 +85,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6485458902703778311
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4838267258987082089}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f038812af0d808341905b91019c3eb08, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4838267259119803631
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4838267259119803630}
   - component: {fileID: 4838267259119803633}
+  - component: {fileID: 3961698802033154512}
   m_Layer: 0
   m_Name: Big
   m_TagString: Untagged
@@ -168,6 +190,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &3961698802033154512
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4838267259119803631}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 33f9d4fdca5d8db4db3eba6ac525a133, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4838267259478884194
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +221,7 @@ GameObject:
   - component: {fileID: 4838267259478884199}
   - component: {fileID: 4838267259478884196}
   - component: {fileID: 4838267259478884197}
-  - component: {fileID: 333087318384548843}
+  - component: {fileID: 8708724834766839497}
   m_Layer: 7
   m_Name: Mario
   m_TagString: Player
@@ -241,23 +283,17 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
---- !u!95 &333087318384548843
-Animator:
-  serializedVersion: 4
+--- !u!114 &8708724834766839497
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4838267259478884194}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4a942c2393abfe14da995ccd3dc8590a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0511b221c473bda4cacf78983ed798e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2000
+  jumpForce: 9
