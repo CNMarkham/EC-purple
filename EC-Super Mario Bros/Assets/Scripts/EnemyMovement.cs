@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
 
-    public float speed = 2f;
-    public Vector2 ddirection = Vector2.left;
+    public float speed = 9f;
+    public Vector2 direction = Vector2.left;
     private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -15,6 +15,6 @@ public class EnemyMovement : MonoBehaviour
     }
     private void OnBecameVisible()
     {
-        rb.velocity = ddirection * speed;
+        rb.velocity = direction * speed;
     }
 }
