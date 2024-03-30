@@ -50,7 +50,7 @@ public class PlayerBehaviour : MonoBehaviour
         GetComponent<CapsuleCollider2D>().size = new  Vector2(1f, 2f);
         GetComponent<CapsuleCollider2D>().offset = new Vector2(0, 0.5f);
 
-        big = false;
+        big = true;
         StartCoroutine("ChangeSize");
     }
 

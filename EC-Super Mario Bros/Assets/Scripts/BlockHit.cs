@@ -26,6 +26,12 @@ public class BlockHit : MonoBehaviour
             Instantiate(item, transform);
             animator.SetTrigger("hit");
             maxHits--;
+            
+        }
+        if (maxHits == 0)
+        {
+            SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            spriteRenderer.sprite = emptyBlock;
         }
     }
 }
