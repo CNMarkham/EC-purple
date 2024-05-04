@@ -40,15 +40,26 @@ using UnityEngine;
 
 public class Tetromino : MonoBehaviour
 {
-                              private     float        previousTime;
-             public               float                          fallTime                        = 0.8f;
-                    private              float                       tempTime =           0;
-                         public                       int                                                  width =                                                     10;
-             public         static                  int          height                                                                               =20;
-                                     //            Update          is              called        once     per             frame
+    private float previousTime;
+    public float fallTime = 0.8f;
+    private float tempTime = 0;
+    public int width = 10;
+    public static int height = 20;
+    public Vector3 rotationPoint;
+    //            Update          is              called        once     per             frame
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            Vector3 convertedPoint = transform.TransformPoint(rotationPoint);
+            transform.RotateAround(convertedPoint, Vector3.forward, -90);
+
+            if (!ValidMove())
+            {
+                transform.RotateAround(convertedPoint, Vector3.forward, 90);
+            }
+        }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
@@ -83,6 +94,8 @@ public class Tetromino : MonoBehaviour
             if (!ValidMove())
             {
                 transform.position += Vector3.up;
+                this.enabled = false;
+                FindObjectOfType<Spawner>().SpawnTetromino();
             }
 
 
@@ -120,4 +133,12 @@ public class Tetromino : MonoBehaviour
         }
         return true;
     }
+    public void AddToGrid()
+    {
+
+
+    }
+    
+    
+    
 }
